@@ -1,13 +1,6 @@
-import {
-  HStack,
-  Link,
-  Text,
-  TextProps,
-  useColorModeValue as mode,
-} from '@chakra-ui/react';
+import { Heading, HStack, Link, Text, TextProps } from '@chakra-ui/react';
 import { motion, Variants } from 'framer-motion';
 import NextLink from 'next/link';
-import { DARK_BLUE_COLOR, LIGHT_BLUE_COLOR } from 'src/constants';
 import ThemeButton from '../theme-button';
 
 const variants: Variants = {
@@ -40,24 +33,14 @@ const Logo = () => {
       >
         <NextLink href='/' passHref>
           <Link
-            as='h1'
-            fontSize='2xl'
-            fontFamily='Berkshire Swash'
+            as={Heading}
+            variant='subtitle'
             _hover={{ textDecoration: 'none' }}
           >
-            /home/hakkaofdev
+            Calendar
           </Link>
         </NextLink>
       </motion.div>
-      <MotionText
-        fontSize='3xl'
-        fontWeight='extrabold'
-        color={mode(LIGHT_BLUE_COLOR, DARK_BLUE_COLOR)}
-        variants={variants}
-        animate='animate'
-      >
-        #
-      </MotionText>
     </HStack>
   );
 };

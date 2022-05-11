@@ -1,0 +1,16 @@
+export const shadows = {
+  none: 'none',
+  xs: '-2px 4px 8px 0px rgba(0, 0, 0, 0.16)',
+  'xs-dark': '-2px 4px 8px 0px rgba(255, 255, 255, 0.16)',
+  sm: '-3px 6px 16px 0px rgba(0, 0, 0, 0.16)',
+  'sm-dark': '-3px 6px 16px 0px rgba(255, 255, 255, 0.16)',
+  base: '-4px 8px 24px 0px rgba(0, 0, 0, 0.16)',
+  'base-dark': '-4px 8px 24px 0px rgba(255, 255, 255, 0.16)',
+  md: '-5px 12px 32px 0px rgba(0, 0, 0, 0.16)',
+  'md-dark': '-5px 12px 32px 0px rgba(255, 255, 255, 0.16)',
+  lg: '-6px 16px 48px 0px rgba(0, 0, 0, 0.16)',
+  'lg-dark': '-6px 16px 48px 0px rgba(255, 255, 255, 0.16)',
+  inner: '-4px 8px 18px 0px rgba(0, 0, 0, 0.08) inset',
+  'inner-darker': '-4px 8px 24px 0px rgba(0, 0, 0, 0.16) inset',
+  'inner-glow': '-4px 8px 24px 0px rgba(255, 255, 255, 0.08) inset',
+};

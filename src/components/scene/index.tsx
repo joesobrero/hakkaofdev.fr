@@ -2,7 +2,6 @@ import { Heading, StackProps, VStack } from '@chakra-ui/react';
 import { motion, useAnimation, Variants } from 'framer-motion';
 import { PropsWithChildren, useEffect } from 'react';
 import { useInView } from 'react-intersection-observer';
-import SummaryTitle from '../summary-title';
 
 const variants: Variants = {
   visible: {
@@ -59,7 +58,6 @@ const Scene = ({ children, id, number, title, summaryTitle, align }: Props) => {
       py={20}
     >
       <VStack spacing={-2} align={align}>
-        <SummaryTitle number={number} title={summaryTitle} />
         <Heading as='h1' textTransform='uppercase'>
           {title}
         </Heading>

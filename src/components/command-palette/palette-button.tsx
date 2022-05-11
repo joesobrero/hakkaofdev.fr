@@ -13,7 +13,7 @@ const PaletteButton = () => {
         colorScheme='hakka'
         aria-label='Palette button'
         variant='solid'
-        color='gray.600'
+        color='white'
         icon={<FiCommand />}
         onClick={openPalette}
       />

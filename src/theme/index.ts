@@ -1,49 +1,127 @@
-import { extendTheme, theme as base } from '@chakra-ui/react';
-import { mode } from '@chakra-ui/theme-tools';
-
-const styles = {
-  global: (props) => ({
-    body: {
-      bg: mode('#fdfdff', '#2d3142')(props),
-    },
-  }),
-};
-
-const colors = {
-  hakka: {
-    100: '#CAF0F8',
-    200: '#ADE8F4',
-    300: '#90E0EF',
-    400: '#48CAE4',
-    500: '#00B4D8',
-    600: '#0096C7',
-    700: '#0077B6',
-    800: '#023E8A',
-    900: '#03045E',
-  },
-};
-
-const fonts = {
-  heading: `Noto Sans, ${base.fonts.heading}`,
-  body: `Open Sans, ${base.fonts.body}`,
-};
-
-const components = {
-  Button: {
-    variants: {
-      pill: (props) => ({
-        ...base.components.Button.variants.outline(props),
-        rounded: 'full',
-        color: 'gray.500',
-      }),
-    },
-  },
-};
+import { extendTheme, withDefaultColorScheme } from '@chakra-ui/react';
+// data display
+import { Badge } from './data-display/badge';
+import { Code } from './data-display/code';
+import { Divider } from './data-display/divider';
+import { Kbd } from './data-display/kbd';
+import { List } from './data-display/list';
+import { Stat } from './data-display/stat';
+import { Table } from './data-display/table';
+import { Tag } from './data-display/tag';
+// disclosure
+import { Accordion } from './disclosure/accordion';
+import { Tabs } from './disclosure/tabs';
+// forms
+import { Button } from './forms/button';
+import { Checkbox } from './forms/checkbox';
+// global
+import { colors } from './global/colors';
+import {
+  fonts,
+  fontSizes,
+  fontWeights,
+  letterSpacings,
+  lineHeights,
+} from './global/fonts';
+import { layerStyles } from './global/layerStyles';
+import { shadows } from './global/shadows';
+import { radii, sizes, space } from './global/sizes';
+import { styles } from './global/styles';
+import { textStyles } from './global/textStyles';
+import { zIndices } from './global/zIndices';
+// overlays
+import { Tooltip } from './overlays/tooltip';
+// typography
+import { Heading } from './typography/heading';
+import { Text } from './typography/text';
 
 const config = {
   initialColorMode: 'dark',
   useSystemColorMode: true,
 };
 
-const theme = extendTheme({ config, styles, components, fonts, colors });
+const components = {
+  // forms
+  Button,
+  Checkbox,
+  // Editable,
+  // Form Control,
+  // Input,
+  // Number Input,
+  // Pin Input,
+  // Radio,
+  // Range Slider,
+  // Select,
+  // Slider
+  // Switch
+  // Textarea
+
+  // data display
+  Badge,
+  Code,
+  Divider,
+  Kbd,
+  List,
+  Stat,
+  Table,
+  Tag,
+
+  // disclosure
+  Accordion,
+  Tabs,
+
+  // layout
+  // Aspect Ratio
+  // Box
+  // Center
+  // Container
+  // Flex
+  // Grid
+  // Simple Grid
+  // Stack
+  // Wrap
+
+  // overlays
+  // Alert Dialog
+  // Drawer
+  // Menu
+  // Modal
+  // Popover
+  Tooltip,
+
+  // typography
+  Text,
+  Heading,
+
+  // feedback
+  // Alert,
+  // Circular Progress,
+  // Progress,
+  // Skeleton,
+  // Spinner,
+  // Toast,
+};
+
+const theme = extendTheme(
+  {
+    colors,
+    styles,
+    layerStyles,
+    textStyles,
+    fonts,
+    fontSizes,
+    fontWeights,
+    lineHeights,
+    letterSpacings,
+    sizes,
+    radii,
+    space,
+    zIndices,
+    shadows,
+    config,
+    components,
+  },
+  withDefaultColorScheme({ colorScheme: 'orange' })
+);
+
 export default theme;

@@ -2,11 +2,11 @@ import Palette from '@/components/command-palette';
 import MainLayout from '@/components/main-layout';
 import PaletteProvider from '@/providers/palette-provider';
 import { ChakraProvider } from '@chakra-ui/react';
-import '@fontsource/berkshire-swash';
-import '@fontsource/noto-sans';
+import '@fontsource/prompt';
+import '@fontsource/rubik';
 import { AnimatePresence } from 'framer-motion';
 import { AppProps } from 'next/app';
-import theme from '../src/theme';
+import theme from 'src/theme';
 
 const App = ({ Component, pageProps, router }: AppProps) => {
   return (
